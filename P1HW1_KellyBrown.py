@@ -1,3 +1,8 @@
+ # Your Name Kelly Brown
+ # Date 09/24/24
+ # Assignment Name
+ # A brief description of the project
+
 # Function to calculate power
 def calculate_power(base, exponent):
     result = base ** exponent
