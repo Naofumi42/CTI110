@@ -1,6 +1,6 @@
-# P3LAB_LastnameFirstname.py
-# Author: Your Name
-# Date: YYYY-MM-DD
+# P3LAB_BrownKelly.py
+# Author: Kelly Brown
+# Date: 10/20/2024
 # Description: This program calculates the most efficient number of dollars, quarters, dimes, nickels, and pennies needed to make a given amount of money.
 
 def main():
