@@ -1,32 +1,39 @@
 # P3LAB_BrownKelly.py
-# Author: Kelly Brown
+# Author: Kelly Brown   
 # Date: 10/20/2024
 # Description: This program calculates the most efficient number of dollars, quarters, dimes, nickels, and pennies needed to make a given amount of money.
 
 def main():
-    # Prompt the user for input
-    money_input = input("Enter a money amount (e.g., 12.34): ")
+    # Prompt user for money input
+    money_input = float(input("Enter an amount of money (e.g., 12.34): "))
     
-    # Convert the input to cents
-    try:
-        money = float(money_input)
-        cents = int(round(money * 100))
-    except ValueError:
-        print("Invalid input. Please enter a valid money amount.")
-        return
-
-    # Calculate the number of each type of coin
-    dollars = cents // 100
-    cents %= 100
-    quarters = cents // 25
-    cents %= 25
-    dimes = cents // 10
-    cents %= 10
-    nickels = cents // 5
-    cents %= 5
-    pennies = cents
-
-    # Output the results
+    # Check if the input is zero
+    if money_input == 0:
+        print("No Change.")
+                    
+    # Convert money to cents
+    total_cents = int(money_input * 100)
+    
+    # Calculate number of dollars
+    dollars = total_cents // 100
+    total_cents %= 100
+    
+    # Calculate number of quarters
+    quarters = total_cents // 25
+    total_cents %= 25
+    
+    # Calculate number of dimes
+    dimes = total_cents // 10
+    total_cents %= 10
+    
+    # Calculate number of nickels
+    nickels = total_cents // 5
+    total_cents %= 5
+    
+    # Remaining cents are pennies
+    pennies = total_cents
+    
+    # Display the results
     if dollars > 0:
         print(f"{dollars} dollar{'s' if dollars > 1 else ''}")
     if quarters > 0:
@@ -38,5 +45,6 @@ def main():
     if pennies > 0:
         print(f"{pennies} penn{'ies' if pennies > 1 else 'y'}")
 
+# Call the main function to execute the program
 if __name__ == "__main__":
     main()
